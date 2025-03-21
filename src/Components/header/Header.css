@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(to right, #0077b6, #00b4d8);
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mostrar menú en pantallas grandes */
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Estilo menú hamburguesa en móvil (si lo quieres desplegable, se puede mejorar con JS) */
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 119, 182, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    display: block;
+  }
+
+  .menu-btn.active + .nav .nav-links {
+    display: flex;
+  }
+}
