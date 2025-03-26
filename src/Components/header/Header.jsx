@@ -4,7 +4,7 @@ function Header() {
   return (
 
 <header class="header">
-  <div class="logo">📿 PescApp</div>
+  <div class="logo">🎣 Salitre</div>
   <nav class="nav">
     <ul class="nav-links">
       <li><a href="#inicio">Inicio</a></li>
