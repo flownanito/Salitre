@@ -9,9 +9,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/Home" element={<Home />}> </Route>
-        <Route path="/profile" element={<Profile />}> </Route>
-        <Route path="/shopin" element={<Shop />}> </Route>
-        <Route path="*" element={<Home />}> </Route>
+        <Route path="/Profile" element={<Profile />}> </Route>
+        <Route path="/Shop" element={<Shop />}> </Route>
       </Routes>
     </BrowserRouter>
   )

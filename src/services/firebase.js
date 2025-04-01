@@ -8,6 +8,7 @@ import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: "AIzaSyBqPfrIGjfbflRCxp58DJzdDIHnjjE75zg",
   authDomain: "salitre-da613.firebaseapp.com",
+  databaseURL: "https://salitre-da613-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "salitre-da613",
   storageBucket: "salitre-da613.firebasestorage.app",
   messagingSenderId: "893950473504",

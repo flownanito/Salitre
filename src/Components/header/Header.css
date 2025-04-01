@@ -2,70 +2,59 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background: linear-gradient(to right, #0077b6, #00b4d8);
+  padding: 1rem;
+  background-color: #0077b6;
   color: white;
-  font-family: 'Arial', sans-serif;
 }
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .nav {
-  display: none;
+  display: flex;
+  gap: 1rem;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
-  text-decoration: none;
+.nav-links li a {
   color: white;
-  font-weight: bold;
+  text-decoration: none;
 }
 
 .menu-btn {
+  display: none;
   background: none;
   border: none;
-  font-size: 1.8rem;
   color: white;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* Mostrar menú en pantallas grandes */
-@media (min-width: 768px) {
+/* Mobile styles */
+@media (max-width: 768px) {
   .nav {
-    display: block;
-  }
-  .menu-btn {
-    display: none;
-  }
-}
-
-/* Estilo menú hamburguesa en móvil (si lo quieres desplegable, se puede mejorar con JS) */
-@media (max-width: 767px) {
-  .nav-links {
     display: none;
     flex-direction: column;
-    background: rgba(0, 119, 182, 0.9);
+    background-color: #0077b6;
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding: 1rem 0;
   }
 
-  .nav-links a {
-    padding: 10px;
-    display: block;
-  }
-
-  .menu-btn.active + .nav .nav-links {
+  .nav-open {
     display: flex;
+  }
+
+  .menu-btn {
+    display: block;
   }
 }
