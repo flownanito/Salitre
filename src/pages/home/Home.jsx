@@ -10,14 +10,12 @@ import "./Home.css";
 function Home() {
   return (
     <body>
-
+<Header />
 
       <div>
-        <Header />
 
 
         <section className="carousel" id="capturas">
-          <h2>Capturas de la Semana</h2>
           <div className="carousel-container">
             <div className="carousel-slide">
               <img src={captura1} alt="Captura 1" />
@@ -36,9 +34,9 @@ function Home() {
   <div className="news-container">
     <button
       className="news-item"
-      onClick={() => window.open("https://front.id/es/articles/css-animaciones-con-keyframes" , "_blank")}
+      onClick={() => window.open("https://www3.gobiernodecanarias.org/noticias/los-grupos-de-accion-local-de-pesca-y-acuicultura-dispondran-de-68m-para-acciones-de-impulso-de-la-economia-azul/" , "_blank")}
     >
-      Nueva regulación sobre pesca sostenible
+      Los Grupos de Acción Local de Pesca y Acuicultura dispondrán de 6,8M para acciones de impulso de la economía azul
     </button>
     <button
       className="news-item"

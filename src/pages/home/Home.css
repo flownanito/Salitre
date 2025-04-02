@@ -1,3 +1,4 @@
+/* Estilo general */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -7,22 +8,24 @@ body {
   text-align: center;
 }
 
-
+/* Carrusel */
 .carousel-container {
   display: flex;
   width: 90%;
-  animation: slide 9s infinite; 
+  margin: auto;
+  animation: slide 9s infinite;
+  overflow: hidden;
 }
 
 .carousel-slide {
-  flex: 0 0 100%; 
+  flex: 0 0 100%;
 }
 
 .carousel-slide img {
-    width: 100%; 
-    height: 800px; 
-    object-fit: cover; 
-    border-radius: 10px;
+  width: 100%;
+  height: 600px; /* Ajustado para pantallas más pequeñas */
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 @keyframes slide {
@@ -40,9 +43,10 @@ body {
   }
 }
 
+/* Contenedor de noticias */
 .news-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas para ordenadores */
   gap: 20px;
   padding: 20px;
   max-width: 90%;
@@ -59,7 +63,7 @@ body {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
+  /* transition: transform 0.3s ease, background 0.3s ease; */
 }
 
 .news-item:hover {
@@ -71,9 +75,10 @@ body {
   transform: translateY(0); /* Vuelve a su posición al hacer clic */
 }
 
+/* Contenedor de tarjetas de noticias */
 .news-board {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable */
   gap: 20px;
   padding: 20px;
   max-width: 90%;
@@ -102,6 +107,7 @@ body {
   font-weight: bold;
 }
 
+/* Contenedor de miembros */
 .miembros-container {
   display: flex;
   justify-content: center;
@@ -132,40 +138,66 @@ body {
 }
 
 /* Responsive Design */
+
+/* Para pantallas medianas (tablets) */
 @media (max-width: 1024px) {
-  .carousel {
-      width: 100%;
+  .carousel-container {
+    width: 100%;
+  }
+
+  .news-container {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
   }
 
   .miembros-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
+/* Para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
   header {
-      font-size: 22px;
-      padding: 15px;
+    font-size: 22px;
+    padding: 15px;
   }
 
-  .carousel {
-      width: 100%;
+  .carousel-container {
+    width: 100%;
   }
-}
 
-@media (max-width: 480px) {
-  .carousel {
-      width: 100%;
+  .news-container {
+    grid-template-columns: 1fr; /* Una columna */
   }
 
   .miembro {
-      width: 90%;
-      padding: 20px;
+    width: 90%;
+    padding: 20px;
   }
 
   .miembro img {
-      width: 100px;
-      height: 100px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Para pantallas muy pequeñas (teléfonos pequeños) */
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 100%;
+  }
+
+  .news-container {
+    grid-template-columns: 1fr; /* Una columna */
+  }
+
+  .miembro {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .miembro img {
+    width: 80px;
+    height: 80px;
   }
 }

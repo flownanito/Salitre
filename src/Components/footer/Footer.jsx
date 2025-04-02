@@ -3,15 +3,15 @@ import "./Footer.css";
 
 function Footer() {
   return (
-<footer className="footer">
+    <footer className="footer">
       <div className="footer-content">
         <p className="footer-title">🌊 Salitre - Comunidad de Pescadores 🎣</p>
 
         <nav className="footer-nav">
-          <a href="#inicio">Inicio</a>
-          <a href="#capturas">Mis Capturas</a>
-          <a href="#comunidad">Comunidad</a>
-          <a href="#contacto">Contacto</a>
+          <li><a href="/Home">Inicio</a></li>
+          <li><a href="/Shop">Tienda</a></li>
+          <li><a href="/Team">Comunidad</a></li>
+          <li><a href="/Porfile">Perfil</a></li>
         </nav>
 
         <p className="footer-legal">
