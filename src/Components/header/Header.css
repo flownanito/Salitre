@@ -2,70 +2,86 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background: linear-gradient(to right, #0077b6, #00b4d8);
-  color: white;
-  font-family: 'Arial', sans-serif;
+  padding: 10px 20px;
+  background-color: #0056b3; /* Azul más oscuro */
+  color: white; /* Texto blanco para contraste */
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+.header .logo {
+  font-size: 2rem; /* Aumenta el tamaño de la palabra "Salitre" */
+  font-weight: bold; /* Hace que el texto sea más destacado */
+  flex-grow: 1; /* Permite que ocupe más espacio en el header */
+}
+
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0056b3;
+}
+
+.menu-button img {
+  width: 30px;
+  height: 30px;
 }
 
 .nav {
-  display: none;
+  display: flex;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links li a {
   text-decoration: none;
-  color: white;
-  font-weight: bold;
+  color: rgb(0, 0, 0); /* Asegúrate de que los enlaces sean visibles sobre el fondo azul */
+  padding: 5px 10px; /* Espaciado interno para los enlaces */
+  transition: background-color 0.3s ease;
 }
 
-.menu-btn {
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  color: white;
-  cursor: pointer;
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover con fondo transparente */
+  border-radius: 5px; /* Bordes redondeados para el efecto hover */
 }
 
-/* Mostrar menú en pantallas grandes */
-@media (min-width: 768px) {
-  .nav {
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+  .menu-button {
     display: block;
   }
-  .menu-btn {
-    display: none;
-  }
-}
 
-/* Estilo menú hamburguesa en móvil (si lo quieres desplegable, se puede mejorar con JS) */
-@media (max-width: 767px) {
-  .nav-links {
+  .nav {
     display: none;
     flex-direction: column;
-    background: rgba(0, 119, 182, 0.9);
     position: absolute;
     top: 60px;
-    left: 0;
-    width: 100%;
+    right: 20px;
+    background: #0056b3; /* Azul más oscuro para el menú desplegable */
+    border: 1px solid #003f7f; /* Un borde más oscuro para contraste */
     padding: 10px;
   }
 
-  .nav-links a {
-    padding: 10px;
-    display: block;
-  }
-
-  .menu-btn.active + .nav .nav-links {
+  .nav.open {
     display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links li a {
+    color: white; /* Asegúrate de que los enlaces sean visibles en el menú desplegable */
+    padding: 10px;
   }
 }
